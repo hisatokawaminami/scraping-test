@@ -16,7 +16,8 @@ puppeteer
   .then(function(html) {
     //(replace .one-event with td)
     //make parser  .one-event
-    $('span[class=date dtstart]', html).each(function() {
+    $('td', html).each(function() {
+      console.log("Does this work?"+$('h5').text());
       console.log("This is a breaking point "+counter+" "+$(this).text());
       console.log("   ");
       counter++;
